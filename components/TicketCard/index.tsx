@@ -17,6 +17,7 @@ type TicketCardProps = {
   attractionRatingCount: number;
   attractionRatingValue: number;
   onButtonClick: () => void;
+  description: string;
 };
 
 const TicketCard = ({
@@ -29,6 +30,7 @@ const TicketCard = ({
   attractionRatingCount,
   attractionRatingValue,
   onButtonClick,
+  description
 }: TicketCardProps) => {
   const resolvePrice = (price: number) => {
     const priceValue = price ? price : 0;
@@ -53,6 +55,9 @@ const TicketCard = ({
             {attractionTitle}
           </h3>
           <LocationInfoText locationText={attractionLocation} />
+          <div className="mt-4 sm:mt-11">
+            {description}
+          </div>
           <div className="mt-4 sm:mt-11">
             <ReviewRating
               reviewNote={attractionRatingValue}
