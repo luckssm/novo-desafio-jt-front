@@ -113,6 +113,7 @@ export default function Home({
         attractionPriceNow={completeTicket?.price?.discount}
         attractionRatingCount={completeTicket?.rating?.reviewsCount}
         attractionRatingValue={completeTicket?.rating?.value}
+        description={"Descrição qualquer aqui só para teste"}
         onButtonClick={() =>
           goToTicketPage({ url: `/detalhe-ingresso/${completeTicket?.id}` })
         }
